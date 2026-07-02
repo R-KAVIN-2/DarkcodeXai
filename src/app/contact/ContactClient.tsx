@@ -183,10 +183,10 @@ ${data.description}
                   <div className="flex-1">
                     <h3 className="font-bold text-lg mb-1">Email Us</h3>
                     <p className="text-sm text-gray-400 mb-3">Send us your inquiries anytime.</p>
-                    <p className="font-medium text-[#00E5FF] mb-4">hello@darkcodexai.com</p>
+                    <p className="font-medium text-[#00E5FF] mb-4">infodarkcodexai@gmail.com</p>
                     <button 
                       onClick={() => {
-                        navigator.clipboard.writeText("hello@darkcodexai.com");
+                        navigator.clipboard.writeText("infodarkcodexai@gmail.com");
                         showToast("Email address copied to clipboard!");
                       }}
                       className="text-xs font-semibold px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-white/10"
@@ -207,9 +207,9 @@ ${data.description}
                   <div className="flex-1">
                     <h3 className="font-bold text-lg mb-1">Call Us</h3>
                     <p className="text-sm text-gray-400 mb-3">Speak directly with our team during business hours.</p>
-                    <p className="font-medium text-[#2563EB] mb-4">+91 XXXXX XXXXX</p>
+                    <p className="font-medium text-[#2563EB] mb-4">+91 6383298805</p>
                     <a 
-                      href="tel:+910000000000"
+                      href="tel:+916383298805"
                       className="text-xs font-semibold px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-white/10 inline-block"
                     >
                       Call Now
@@ -266,7 +266,7 @@ ${data.description}
                     { icon: <InstagramIcon />, link: "#", name: "Instagram" },
                     { icon: <FacebookIcon />, link: "#", name: "Facebook" },
                     { icon: <TwitterIcon />, link: "#", name: "X (Twitter)" },
-                    { icon: <MessageCircle size={20} />, link: "https://wa.me/910000000000", name: "WhatsApp" },
+                    { icon: <MessageCircle size={20} />, link: "https://wa.me/916383298805", name: "WhatsApp" },
                   ].map((social, i) => (
                     <a 
                       key={i} href={social.link} target="_blank" rel="noreferrer" title={social.name}
