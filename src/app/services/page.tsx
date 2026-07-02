@@ -1,0 +1,92 @@
+import { Bot, Cpu, Globe, Database, ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+
+export default function ServicesPage() {
+  return (
+    <div className="pt-32 pb-20">
+      <div className="container mx-auto px-6">
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <h1 className="text-5xl font-space-grotesk font-bold text-white mb-6">Our Premium Services</h1>
+          <p className="text-xl text-gray-400 leading-relaxed">
+            We provide cutting-edge technology solutions that transform businesses. From advanced AI models to scalable enterprise platforms, our services are designed for the future.
+          </p>
+        </div>
+
+        <div className="space-y-32">
+          {/* Service 1 */}
+          <ServiceSection 
+            title="Artificial Intelligence"
+            description="Leverage the power of modern AI to extract insights, automate decisions, and create intelligent products. We specialize in building custom LLMs, computer vision systems, and predictive analytics platforms."
+            icon={<Bot className="w-12 h-12 text-primary" />}
+            features={["Custom LLM Development", "Computer Vision & OCR", "Predictive Analytics", "AI Chatbots & Agents"]}
+            reversed={false}
+          />
+
+          {/* Service 2 */}
+          <ServiceSection 
+            title="Smart Automation"
+            description="Eliminate repetitive tasks and streamline your workflows with our intelligent automation solutions. We build robust RPA bots and business process automation systems."
+            icon={<Cpu className="w-12 h-12 text-accent" />}
+            features={["Workflow Automation", "CRM & HR Automation", "Robotic Process Automation", "Automated Email & Marketing"]}
+            reversed={true}
+          />
+
+          {/* Service 3 */}
+          <ServiceSection 
+            title="Website Development"
+            description="We build world-class, highly scalable web applications and SaaS platforms using modern frameworks like Next.js, React, and Node.js. Focus on performance, SEO, and premium UI/UX."
+            icon={<Globe className="w-12 h-12 text-secondary" />}
+            features={["Enterprise Web Apps", "SaaS Platform Development", "High-Performance Landing Pages", "Admin Dashboards"]}
+            reversed={false}
+          />
+
+          {/* Service 4 */}
+          <ServiceSection 
+            title="Data Solutions"
+            description="Transform your raw data into actionable business intelligence. We design robust ETL pipelines, data warehouses, and stunning interactive dashboards."
+            icon={<Database className="w-12 h-12 text-primary" />}
+            features={["Data Engineering & ETL", "Interactive Dashboards", "Big Data Processing", "Business Intelligence"]}
+            reversed={true}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ServiceSection({ title, description, icon, features, reversed }: { title: string, description: string, icon: React.ReactNode, features: string[], reversed: boolean }) {
+  return (
+    <div className={`flex flex-col ${reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-16`}>
+      <div className="flex-1 space-y-6">
+        <div className="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+          {icon}
+        </div>
+        <h2 className="text-4xl font-space-grotesk font-bold text-white">{title}</h2>
+        <p className="text-lg text-gray-400 leading-relaxed">
+          {description}
+        </p>
+        <ul className="space-y-3 pt-4">
+          {features.map((feature, idx) => (
+            <li key={idx} className="flex items-center gap-3 text-gray-300 font-medium">
+              <CheckCircle2 className="w-5 h-5 text-primary" />
+              {feature}
+            </li>
+          ))}
+        </ul>
+        <div className="pt-6">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-primary hover:border-primary text-white transition-all group">
+            Consult With Us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      </div>
+      
+      <div className="flex-1 w-full relative">
+        {/* Placeholder for 3D or visual asset */}
+        <div className="aspect-square max-w-md mx-auto glass rounded-full relative flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20 animate-spin-slow" />
+          {icon}
+        </div>
+      </div>
+    </div>
+  );
+}
