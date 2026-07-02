@@ -239,22 +239,6 @@ ${data.description}
                 </div>
               </div>
 
-              {/* Card 4: Business Hours */}
-              <div className="glass p-6 rounded-[20px] border border-white/10 hover:border-white/30 transition-colors group relative overflow-hidden">
-                <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
-                    <Clock size={24} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg mb-4">Business Hours</h3>
-                    <div className="space-y-2 text-sm text-gray-400">
-                      <div className="flex justify-between"><span>Monday – Friday</span><span className="text-white">9:00 AM – 6:00 PM (IST)</span></div>
-                      <div className="flex justify-between"><span>Saturday</span><span className="text-white">10:00 AM – 2:00 PM</span></div>
-                      <div className="flex justify-between"><span>Sunday</span><span className="text-red-400">Closed</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               {/* Card 5: Connect With Us */}
               <div className="glass p-6 rounded-[20px] border border-white/10 hover:border-white/30 transition-colors group relative overflow-hidden">
