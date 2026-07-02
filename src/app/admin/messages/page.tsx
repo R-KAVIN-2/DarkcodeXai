@@ -11,6 +11,8 @@ async function markAsRead(id: string) {
   revalidatePath("/admin/messages");
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function MessagesPage() {
   const messages = await prisma.message.findMany({
     orderBy: { createdAt: "desc" }
