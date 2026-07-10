@@ -23,10 +23,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "DarkCode X AI | Intelligent Solutions for Real-World Problems",
-  description: "Building the Future with Artificial Intelligence. We create intelligent AI-powered products, scalable software, smart automation systems, and data-driven solutions.",
+  description: "DarkCodeX AI builds intelligent AI-powered products, scalable software, and smart automation systems to solve real-world problems.",
   openGraph: {
     title: "DarkCode X AI | Intelligent Solutions for Real-World Problems",
-    description: "Building the Future with Artificial Intelligence. We create intelligent AI-powered products, scalable software, smart automation systems, and data-driven solutions.",
+    description: "DarkCodeX AI builds intelligent AI-powered products, scalable software, and smart automation systems to solve real-world problems.",
     url: "https://darkcodexai.com",
     siteName: "DarkCode X AI",
     images: [
