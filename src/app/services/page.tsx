@@ -1,6 +1,17 @@
 import { Bot, Cpu, Globe, Database, ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Services & Tech Solutions | DarkCode X AI",
+  description: "Explore our premium services: Custom LLMs, Smart Automation, Web Development, and Data Engineering tailored for modern enterprises.",
+  openGraph: {
+    title: "AI Services & Tech Solutions | DarkCode X AI",
+    description: "Explore our premium services: Custom LLMs, Smart Automation, Web Development, and Data Engineering.",
+    url: "https://darkcodexai.com/services",
+  }
+};
 
 export default function ServicesPage() {
   return (
@@ -94,7 +105,7 @@ function ServiceSection({ id, title, description, icon, imageSrc, features, reve
           <div className="aspect-[4/3] max-w-lg mx-auto rounded-3xl relative overflow-hidden glass border border-[#C084FC]/20 shadow-[0_0_40px_-10px_rgba(192,132,252,0.3)]">
             <Image 
               src={imageSrc} 
-              alt={title}
+              alt={`DarkCode X AI Technology Service: ${title}`}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
