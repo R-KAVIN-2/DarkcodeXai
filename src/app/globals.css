@@ -1,18 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #030712;
-  --color-primary: #00E5FF;
-  --color-secondary: #2563EB;
-  --color-accent: #8B5CF6;
-  --color-foreground: #ffffff;
-  --color-card: rgba(255, 255, 255, 0.06);
-  --color-card-hover: rgba(255, 255, 255, 0.1);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
 }
 
 :root {
-  --background: #030712;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #C084FC;
+  --secondary: #9333EA;
+  --accent: #D946EF;
+  --card: rgba(255, 255, 255, 0.6);
+  --card-hover: rgba(255, 255, 255, 0.8);
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+}
+
+.dark {
+  --background: #0A0514;
   --foreground: #ffffff;
+  --primary: #C084FC;
+  --secondary: #9333EA;
+  --accent: #D946EF;
+  --card: rgba(255, 255, 255, 0.06);
+  --card-hover: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -20,31 +39,32 @@ body {
   color: var(--foreground);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Glassmorphism Utilities */
 .glass {
-  background: var(--color-card);
+  background: var(--card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .glass-hover:hover {
-  background: var(--color-card-hover);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--card-hover);
+  border: 1px solid var(--border-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 229, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(192, 132, 252, 0.15);
 }
 
 /* Glow effects */
 .glow-primary {
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.5);
 }
 
 .glow-text-primary {
-  text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+  text-shadow: 0 0 10px rgba(192, 132, 252, 0.7);
 }
 
 /* Custom Scrollbar */
@@ -53,16 +73,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #0A0514;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2563EB;
+  background: #9333EA;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00E5FF;
+  background: #C084FC;
 }
 
 /* Utility classes for smooth transitions */

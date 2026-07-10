@@ -1,38 +1,22 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.darkcodexai.com";
+  const baseUrl = "https://darkcodexai.com";
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/solutions`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/portfolio`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/research`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-    },
+  // Add all public routes here
+  const routes = [
+    "",
+    "/about",
+    "/services",
+    "/solutions",
+    "/projects",
+    "/contact",
   ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: route === "" ? 1.0 : 0.8,
+  }));
 }

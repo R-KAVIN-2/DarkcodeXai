@@ -3,7 +3,7 @@ import { Code, Camera, Briefcase, MessageSquare } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-background pt-16 pb-8 relative overflow-hidden">
+    <footer className="border-t border-gray-200 dark:border-white/10 bg-background pt-16 pb-8 relative overflow-hidden">
       {/* Decorative gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-2xl h-32 bg-primary/10 blur-[100px] pointer-events-none" />
@@ -14,11 +14,11 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
               <img src="/logo.png" alt="DarkCode X AI Logo" className="h-12 w-auto bg-white p-1 rounded-lg" />
-              <span className="font-space-grotesk text-xl font-bold tracking-tighter text-white">
+              <span className="font-space-grotesk text-xl font-bold tracking-tighter text-gray-900 dark:text-white">
                 DarkCode <span className="text-primary">X</span> AI
               </span>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-xs">
               Building the Future with Artificial Intelligence. We create intelligent
               AI-powered products, scalable software, and smart automation systems.
             </p>
@@ -35,7 +35,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-white mb-6">Quick Links</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-6">Quick Links</h3>
             <ul className="flex flex-col gap-3">
               <FooterLink href="/about">About Us</FooterLink>
               <FooterLink href="/projects">Portfolio</FooterLink>
@@ -45,7 +45,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-white mb-6">Services</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-6">Services</h3>
             <ul className="flex flex-col gap-3">
               <FooterLink href="/services/ai">Artificial Intelligence</FooterLink>
               <FooterLink href="/services/automation">Smart Automation</FooterLink>
@@ -57,15 +57,15 @@ export function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-semibold text-white mb-6">Newsletter</h3>
-            <p className="text-sm text-gray-400 mb-4">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-6">Newsletter</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
               Subscribe to get the latest AI insights and product updates.
             </p>
             <form className="flex gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white outline-none focus:border-primary transition-colors flex-1"
+                className="bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg px-4 py-2 text-sm text-gray-900 dark:text-white outline-none focus:border-primary transition-colors flex-1"
                 required
               />
               <button
@@ -78,11 +78,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm">
+        <div className="border-t border-gray-200 dark:border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-500 dark:text-gray-500 text-sm">
             © {new Date().getFullYear()} DarkCode X AI. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-gray-500">
+          <div className="flex gap-6 text-sm text-gray-500 dark:text-gray-500">
             <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
@@ -102,7 +102,7 @@ function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-background transition-all"
+      className="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-background transition-all"
     >
       {icon}
     </a>
@@ -114,7 +114,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
     <li>
       <Link
         href={href}
-        className="text-gray-400 hover:text-primary transition-colors text-sm flex items-center gap-2 group"
+        className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors text-sm flex items-center gap-2 group"
       >
         <span className="w-1 h-1 rounded-full bg-primary/50 group-hover:bg-primary group-hover:scale-150 transition-all" />
         {children}

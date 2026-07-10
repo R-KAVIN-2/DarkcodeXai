@@ -42,15 +42,15 @@ export default function UploadLogoPage() {
   return (
     <div className="min-h-screen flex items-center justify-center container mx-auto px-6">
       <div className="glass p-12 rounded-3xl max-w-md w-full text-center">
-        <h1 className="text-3xl font-space-grotesk font-bold text-white mb-6">Add Your Logo</h1>
-        <p className="text-gray-400 mb-8">Please select your logo file from your computer to add it directly to the website.</p>
+        <h1 className="text-3xl font-space-grotesk font-bold text-gray-900 dark:text-white mb-6">Add Your Logo</h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-8">Please select your logo file from your computer to add it directly to the website.</p>
         
         <form onSubmit={handleUpload} className="space-y-6">
           <input 
             type="file" 
             accept="image/*" 
             onChange={(e) => setFile(e.target.files?.[0] || null)}
-            className="w-full text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/20 file:text-primary hover:file:bg-primary/30"
+            className="w-full text-gray-700 dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/20 file:text-primary hover:file:bg-primary/30"
           />
           
           <button 
@@ -62,7 +62,7 @@ export default function UploadLogoPage() {
           </button>
         </form>
         
-        {message && <p className="mt-4 text-white font-medium">{message}</p>}
+        {message && <p className="mt-4 text-gray-900 dark:text-white font-medium">{message}</p>}
       </div>
     </div>
   );

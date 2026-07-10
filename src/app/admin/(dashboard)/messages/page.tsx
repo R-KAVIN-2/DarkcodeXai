@@ -22,14 +22,14 @@ export default async function MessagesPage() {
     <div className="space-y-6">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-white font-space-grotesk">Messages Inbox</h1>
-          <p className="text-gray-400 mt-1">View and manage contact form submissions.</p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white font-space-grotesk">Messages Inbox</h1>
+          <p className="text-gray-600 dark:text-gray-400 mt-1">View and manage contact form submissions.</p>
         </div>
       </div>
 
-      <div className="glass rounded-2xl overflow-hidden border border-white/10">
+      <div className="glass rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10">
         {messages.length === 0 ? (
-          <div className="p-12 text-center text-gray-400">
+          <div className="p-12 text-center text-gray-600 dark:text-gray-400">
             <Mail className="w-12 h-12 mx-auto mb-4 opacity-20" />
             <p>No messages yet.</p>
           </div>
@@ -43,17 +43,17 @@ export default async function MessagesPage() {
                 <div className="flex justify-between items-start gap-4">
                   <div className="space-y-4 flex-1">
                     <div className="flex items-center gap-4">
-                      <h3 className="text-lg font-bold text-white">{msg.name}</h3>
-                      <span className="text-sm text-gray-400 px-2 py-1 bg-white/5 rounded-full">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">{msg.name}</h3>
+                      <span className="text-sm text-gray-600 dark:text-gray-400 px-2 py-1 bg-gray-100 dark:bg-white/5 rounded-full">
                         {msg.email}
                       </span>
-                      <span className="text-sm text-gray-500 flex items-center gap-1">
+                      <span className="text-sm text-gray-500 dark:text-gray-500 flex items-center gap-1">
                         <Calendar size={14} />
                         {new Date(msg.createdAt).toLocaleDateString()}
                       </span>
                     </div>
                     
-                    <div className="text-gray-300 whitespace-pre-wrap bg-black/20 p-4 rounded-xl border border-white/5 text-sm leading-relaxed">
+                    <div className="text-gray-700 dark:text-gray-300 whitespace-pre-wrap bg-black/20 p-4 rounded-xl border border-gray-200 dark:border-white/5 text-sm leading-relaxed">
                       {msg.content}
                     </div>
                   </div>

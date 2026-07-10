@@ -95,11 +95,11 @@ ${data.description}
   const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
   return (
-    <div className="bg-[#030712] min-h-screen text-white overflow-hidden">
+    <div className="bg-white dark:bg-[#0A0514] min-h-screen text-gray-900 dark:text-white overflow-hidden">
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[20%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#00E5FF]/10 blur-[150px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-[#8B5CF6]/10 blur-[150px]" />
+        <div className="absolute top-[20%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#C084FC]/10 blur-[150px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-[#D946EF]/10 blur-[150px]" />
       </div>
 
       <div className="container mx-auto max-w-7xl px-6 pt-32 pb-24 relative z-10 flex flex-col lg:flex-row gap-16">
@@ -108,22 +108,22 @@ ${data.description}
         <motion.div initial="hidden" animate="visible" variants={stagger} className="w-full lg:w-1/2 pt-10">
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-space-grotesk font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 leading-tight">
             Let's Build the <br className="hidden lg:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#8B5CF6]">Future Together</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C084FC] to-[#D946EF]">Future Together</span>
           </motion.h1>
           
-          <motion.p variants={fadeInUp} className="text-xl text-gray-300 mb-6 leading-relaxed">
+          <motion.p variants={fadeInUp} className="text-xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
             Whether you're looking to build an AI-powered application, automate business workflows, develop a modern web platform, or transform your ideas into intelligent digital solutions, our team is ready to help.
           </motion.p>
           
-          <motion.p variants={fadeInUp} className="text-lg text-gray-400 mb-10 leading-relaxed">
+          <motion.p variants={fadeInUp} className="text-lg text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
             Tell us about your project, and our experts will get back to you with the best solution tailored to your business goals.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 mb-10">
-            <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#00E5FF] to-[#2563EB] text-white font-bold text-lg hover:shadow-[0_0_30px_-5px_rgba(0,229,255,0.4)] transition-all flex items-center justify-center gap-2">
+            <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#9333EA] text-white font-bold text-lg hover:shadow-[0_0_30px_-5px_rgba(0,229,255,0.4)] transition-all flex items-center justify-center gap-2">
               <Rocket size={20} /> Start Your Project
             </button>
-            <button className="px-8 py-4 rounded-xl glass border border-white/10 text-white font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+            <button className="px-8 py-4 rounded-xl glass border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
               <Calendar size={20} /> Schedule a Free Consultation
             </button>
           </motion.div>
@@ -132,8 +132,8 @@ ${data.description}
             {[
               "Free Consultation", "Quick Response", "Custom AI Solutions", "Enterprise-Ready Development"
             ].map((badge, i) => (
-              <div key={i} className="flex items-center gap-2 text-gray-300">
-                <CheckCircle2 size={18} className="text-[#00E5FF]" />
+              <div key={i} className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                <CheckCircle2 size={18} className="text-[#C084FC]" />
                 <span className="text-sm font-medium">{badge}</span>
               </div>
             ))}
@@ -143,22 +143,22 @@ ${data.description}
           <motion.div variants={fadeInUp} className="relative w-full h-64 mt-16 perspective-1000">
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div animate={{ rotateY: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="relative w-40 h-40 transform-style-3d">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/20 to-[#8B5CF6]/20 rounded-full blur-xl" />
-                <Brain className="w-full h-full text-[#00E5FF] opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C084FC]/20 to-[#D946EF]/20 rounded-full blur-xl" />
+                <Brain className="w-full h-full text-[#C084FC] opacity-80" />
                 
                 {/* Floating Elements */}
-                <motion.div animate={{ y: [-10, 10, -10] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute -top-10 -left-10 p-3 glass rounded-2xl border border-white/10 text-[#00E5FF]">
+                <motion.div animate={{ y: [-10, 10, -10] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute -top-10 -left-10 p-3 glass rounded-2xl border border-gray-200 dark:border-white/10 text-[#C084FC]">
                   <MessageSquare size={24} />
                 </motion.div>
-                <motion.div animate={{ y: [10, -10, 10] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute -bottom-10 -right-10 p-3 glass rounded-2xl border border-white/10 text-[#8B5CF6]">
+                <motion.div animate={{ y: [10, -10, 10] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute -bottom-10 -right-10 p-3 glass rounded-2xl border border-gray-200 dark:border-white/10 text-[#D946EF]">
                   <Globe size={24} />
                 </motion.div>
-                <motion.div animate={{ y: [-15, 15, -15] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="absolute top-1/2 -right-16 p-3 glass rounded-2xl border border-white/10 text-[#2563EB]">
+                <motion.div animate={{ y: [-15, 15, -15] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="absolute top-1/2 -right-16 p-3 glass rounded-2xl border border-gray-200 dark:border-white/10 text-[#9333EA]">
                   <Cloud size={24} />
                 </motion.div>
                 
-                <motion.div animate={{ rotate: 360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} className="absolute inset-[-40px] border-2 border-dashed border-[#00E5FF]/30 rounded-full" />
-                <motion.div animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }} className="absolute inset-[-70px] border border-white/10 rounded-full" />
+                <motion.div animate={{ rotate: 360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} className="absolute inset-[-40px] border-2 border-dashed border-[#C084FC]/30 rounded-full" />
+                <motion.div animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }} className="absolute inset-[-70px] border border-gray-200 dark:border-white/10 rounded-full" />
               </motion.div>
             </div>
           </motion.div>
@@ -167,29 +167,29 @@ ${data.description}
           <motion.div variants={fadeInUp} className="mt-24">
             <div className="mb-10">
               <h2 className="text-3xl font-space-grotesk font-bold mb-3">Get in Touch</h2>
-              <p className="text-gray-400">
+              <p className="text-gray-600 dark:text-gray-400">
                 Have questions or want to discuss your next AI project? Reach out to us through any of the following channels. We'd love to hear from you.
               </p>
             </div>
             
             <div className="space-y-6">
               {/* Card 1: Email */}
-              <div className="glass p-6 rounded-[20px] border border-white/10 hover:border-[#00E5FF]/50 transition-colors group relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="glass p-6 rounded-[20px] border border-gray-200 dark:border-white/10 hover:border-[#C084FC]/50 transition-colors group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C084FC]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#00E5FF] shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#C084FC]/10 flex items-center justify-center text-[#C084FC] shrink-0">
                     <Mail size={24} />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-lg mb-1">Email Us</h3>
-                    <p className="text-sm text-gray-400 mb-3">Send us your inquiries anytime.</p>
-                    <p className="font-medium text-[#00E5FF] mb-4">infodarkcodexai@gmail.com</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Send us your inquiries anytime.</p>
+                    <p className="font-medium text-[#C084FC] mb-4">infodarkcodexai@gmail.com</p>
                     <button 
                       onClick={() => {
                         navigator.clipboard.writeText("infodarkcodexai@gmail.com");
                         showToast("Email address copied to clipboard!");
                       }}
-                      className="text-xs font-semibold px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-white/10"
+                      className="text-xs font-semibold px-4 py-2 bg-gray-100 dark:bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-gray-200 dark:border-white/10"
                     >
                       Copy Email
                     </button>
@@ -198,19 +198,19 @@ ${data.description}
               </div>
 
               {/* Card 2: Phone */}
-              <div className="glass p-6 rounded-[20px] border border-white/10 hover:border-[#2563EB]/50 transition-colors group relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#2563EB]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="glass p-6 rounded-[20px] border border-gray-200 dark:border-white/10 hover:border-[#9333EA]/50 transition-colors group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#9333EA]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-[#2563EB]/10 flex items-center justify-center text-[#2563EB] shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#9333EA]/10 flex items-center justify-center text-[#9333EA] shrink-0">
                     <Phone size={24} />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-lg mb-1">Call Us</h3>
-                    <p className="text-sm text-gray-400 mb-3">Speak directly with our team during business hours.</p>
-                    <p className="font-medium text-[#2563EB] mb-4">+91 6383298805</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Speak directly with our team during business hours.</p>
+                    <p className="font-medium text-[#9333EA] mb-4">+91 6383298805</p>
                     <a 
                       href="tel:+916383298805"
-                      className="text-xs font-semibold px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-white/10 inline-block"
+                      className="text-xs font-semibold px-4 py-2 bg-gray-100 dark:bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-gray-200 dark:border-white/10 inline-block"
                     >
                       Call Now
                     </a>
@@ -219,19 +219,19 @@ ${data.description}
               </div>
 
               {/* Card 3: Office */}
-              <div className="glass p-6 rounded-[20px] border border-white/10 hover:border-[#8B5CF6]/50 transition-colors group relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="glass p-6 rounded-[20px] border border-gray-200 dark:border-white/10 hover:border-[#D946EF]/50 transition-colors group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#D946EF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center text-[#8B5CF6] shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#D946EF]/10 flex items-center justify-center text-[#D946EF] shrink-0">
                     <MapPin size={24} />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-lg mb-1">Office Location</h3>
-                    <p className="text-sm text-gray-400 mb-3">DarkCode X AI</p>
-                    <p className="font-medium text-[#8B5CF6] mb-4">Coimbatore, Tamil Nadu, India</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">DarkCode X AI</p>
+                    <p className="font-medium text-[#D946EF] mb-4">Coimbatore, Tamil Nadu, India</p>
                     <a 
                       href="https://maps.google.com/?q=Coimbatore,Tamil+Nadu,India" target="_blank" rel="noreferrer"
-                      className="text-xs font-semibold px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-white/10 inline-block"
+                      className="text-xs font-semibold px-4 py-2 bg-gray-100 dark:bg-white/5 hover:bg-white/10 rounded-lg transition-colors border border-gray-200 dark:border-white/10 inline-block"
                     >
                       View on Google Maps
                     </a>
@@ -241,7 +241,7 @@ ${data.description}
 
 
               {/* Card 5: Connect With Us */}
-              <div className="glass p-6 rounded-[20px] border border-white/10 hover:border-white/30 transition-colors group relative overflow-hidden">
+              <div className="glass p-6 rounded-[20px] border border-gray-200 dark:border-white/10 hover:border-white/30 transition-colors group relative overflow-hidden">
                 <h3 className="font-bold text-lg mb-4">Connect With Us</h3>
                 <div className="flex gap-4">
                   {[
@@ -254,7 +254,7 @@ ${data.description}
                   ].map((social, i) => (
                     <a 
                       key={i} href={social.link} target="_blank" rel="noreferrer" title={social.name}
-                      className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#00E5FF]/20 hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_-3px_rgba(0,229,255,0.4)] transition-all hover:-translate-y-1"
+                      className="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#C084FC]/20 hover:border-[#C084FC]/50 hover:shadow-[0_0_15px_-3px_rgba(0,229,255,0.4)] transition-all hover:-translate-y-1"
                     >
                       {social.icon}
                     </a>
@@ -267,19 +267,19 @@ ${data.description}
 
         {/* RIGHT SIDE - SMART CONTACT FORM */}
         <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="w-full lg:w-1/2">
-          <div className="glass p-8 md:p-12 rounded-[2rem] border border-white/10 relative overflow-hidden shadow-[0_0_50px_-20px_rgba(139,92,246,0.15)] group hover:border-[#8B5CF6]/30 transition-colors">
+          <div className="glass p-8 md:p-12 rounded-[2rem] border border-gray-200 dark:border-white/10 relative overflow-hidden shadow-[0_0_50px_-20px_rgba(139,92,246,0.15)] group hover:border-[#D946EF]/30 transition-colors">
             
             <div className="mb-10">
               <h2 className="text-3xl font-space-grotesk font-bold mb-3">Tell Us About Your Project</h2>
-              <p className="text-gray-400">Fill out the form below and our team will contact you within 24 hours.</p>
+              <p className="text-gray-600 dark:text-gray-400">Fill out the form below and our team will contact you within 24 hours.</p>
             </div>
 
             {submitStatus === "success" ? (
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="p-8 glass bg-[#10B981]/10 border border-[#10B981]/30 rounded-2xl text-center">
                 <CheckCircle2 className="w-16 h-16 text-[#10B981] mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Thank you!</h3>
-                <p className="text-gray-300">Your inquiry has been submitted successfully. Our team will contact you within 24 hours.</p>
-                <button onClick={() => setSubmitStatus("idle")} className="mt-6 px-6 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white font-medium transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Thank you!</h3>
+                <p className="text-gray-700 dark:text-gray-300">Your inquiry has been submitted successfully. Our team will contact you within 24 hours.</p>
+                <button onClick={() => setSubmitStatus("idle")} className="mt-6 px-6 py-2 bg-gray-200 dark:bg-white/10 hover:bg-white/20 rounded-lg text-gray-900 dark:text-white font-medium transition-colors">
                   Send Another Inquiry
                 </button>
               </motion.div>
@@ -288,21 +288,21 @@ ${data.description}
                 
                 {/* SECTION 1 - Personal Info */}
                 <div className="space-y-4">
-                  <h3 className="text-[#00E5FF] font-medium text-sm tracking-wider uppercase border-b border-white/10 pb-2">1. Personal Information</h3>
+                  <h3 className="text-[#C084FC] font-medium text-sm tracking-wider uppercase border-b border-gray-200 dark:border-white/10 pb-2">1. Personal Information</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <input type="text" placeholder="Full Name *" className={`w-full bg-white/5 border ${errors.fullName ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00E5FF] transition-colors`} {...register("fullName")} />
+                      <input type="text" placeholder="Full Name *" className={`w-full bg-white/5 border ${errors.fullName ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#C084FC] transition-colors`} {...register("fullName")} />
                       {errors.fullName && <p className="text-red-400 text-xs mt-1">{errors.fullName.message}</p>}
                     </div>
                     <div>
-                      <input type="text" placeholder="Company Name" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00E5FF] transition-colors" {...register("companyName")} />
+                      <input type="text" placeholder="Company Name" className="w-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-[#C084FC] transition-colors" {...register("companyName")} />
                     </div>
                     <div>
-                      <input type="email" placeholder="Email Address *" className={`w-full bg-white/5 border ${errors.email ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00E5FF] transition-colors`} {...register("email")} />
+                      <input type="email" placeholder="Email Address *" className={`w-full bg-white/5 border ${errors.email ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#C084FC] transition-colors`} {...register("email")} />
                       {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>}
                     </div>
                     <div>
-                      <input type="tel" placeholder="Phone Number *" className={`w-full bg-white/5 border ${errors.phone ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00E5FF] transition-colors`} {...register("phone")} />
+                      <input type="tel" placeholder="Phone Number *" className={`w-full bg-white/5 border ${errors.phone ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#C084FC] transition-colors`} {...register("phone")} />
                       {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone.message}</p>}
                     </div>
                   </div>
@@ -310,10 +310,10 @@ ${data.description}
 
                 {/* SECTION 2 - Project Details */}
                 <div className="space-y-4">
-                  <h3 className="text-[#00E5FF] font-medium text-sm tracking-wider uppercase border-b border-white/10 pb-2">2. Project Details</h3>
+                  <h3 className="text-[#C084FC] font-medium text-sm tracking-wider uppercase border-b border-gray-200 dark:border-white/10 pb-2">2. Project Details</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <select className={`w-full bg-[#0a0f1c] border ${errors.service ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E5FF] transition-colors appearance-none`} {...register("service")}>
+                      <select className={`w-full bg-[#0a0f1c] border ${errors.service ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C084FC] transition-colors appearance-none`} {...register("service")}>
                         <option value="">Service Required *</option>
                         <option value="Artificial Intelligence">Artificial Intelligence</option>
                         <option value="Machine Learning">Machine Learning</option>
@@ -330,7 +330,7 @@ ${data.description}
                       {errors.service && <p className="text-red-400 text-xs mt-1">{errors.service.message}</p>}
                     </div>
                     <div>
-                      <select className={`w-full bg-[#0a0f1c] border ${errors.industry ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E5FF] transition-colors appearance-none`} {...register("industry")}>
+                      <select className={`w-full bg-[#0a0f1c] border ${errors.industry ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C084FC] transition-colors appearance-none`} {...register("industry")}>
                         <option value="">Industry *</option>
                         <option value="Healthcare">Healthcare</option>
                         <option value="Education">Education</option>
@@ -344,7 +344,7 @@ ${data.description}
                       {errors.industry && <p className="text-red-400 text-xs mt-1">{errors.industry.message}</p>}
                     </div>
                     <div>
-                      <select className={`w-full bg-[#0a0f1c] border ${errors.budget ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E5FF] transition-colors appearance-none`} {...register("budget")}>
+                      <select className={`w-full bg-[#0a0f1c] border ${errors.budget ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C084FC] transition-colors appearance-none`} {...register("budget")}>
                         <option value="">Estimated Budget *</option>
                         <option value="<50k">Less than ₹50,000</option>
                         <option value="50k-200k">₹50,000 – ₹2,00,000</option>
@@ -354,7 +354,7 @@ ${data.description}
                       {errors.budget && <p className="text-red-400 text-xs mt-1">{errors.budget.message}</p>}
                     </div>
                     <div>
-                      <select className={`w-full bg-[#0a0f1c] border ${errors.timeline ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#00E5FF] transition-colors appearance-none`} {...register("timeline")}>
+                      <select className={`w-full bg-[#0a0f1c] border ${errors.timeline ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#C084FC] transition-colors appearance-none`} {...register("timeline")}>
                         <option value="">Expected Timeline *</option>
                         <option value="Immediately">Immediately</option>
                         <option value="1 Month">Within 1 Month</option>
@@ -369,11 +369,11 @@ ${data.description}
 
                 {/* SECTION 3 - Project Description */}
                 <div className="space-y-4">
-                  <h3 className="text-[#00E5FF] font-medium text-sm tracking-wider uppercase border-b border-white/10 pb-2">3. Project Description</h3>
+                  <h3 className="text-[#C084FC] font-medium text-sm tracking-wider uppercase border-b border-gray-200 dark:border-white/10 pb-2">3. Project Description</h3>
                   <div>
                     <textarea 
                       placeholder="Describe your project, business goals, required features, target audience, or any specific requirements. *" 
-                      className={`w-full bg-white/5 border ${errors.description ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00E5FF] transition-colors resize-none min-h-[200px]`}
+                      className={`w-full bg-white/5 border ${errors.description ? "border-red-500" : "border-white/10"} rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#C084FC] transition-colors resize-none min-h-[200px]`}
                       {...register("description")}
                     ></textarea>
                     {errors.description && <p className="text-red-400 text-xs mt-1">{errors.description.message}</p>}
@@ -382,12 +382,12 @@ ${data.description}
 
                 {/* SECTION 4 - File Upload */}
                 <div className="space-y-4">
-                  <h3 className="text-[#00E5FF] font-medium text-sm tracking-wider uppercase border-b border-white/10 pb-2">4. File Upload (Optional)</h3>
-                  <div className="border-2 border-dashed border-white/10 hover:border-[#8B5CF6]/50 rounded-xl p-8 text-center transition-colors relative">
+                  <h3 className="text-[#C084FC] font-medium text-sm tracking-wider uppercase border-b border-gray-200 dark:border-white/10 pb-2">4. File Upload (Optional)</h3>
+                  <div className="border-2 border-dashed border-gray-200 dark:border-white/10 hover:border-[#D946EF]/50 rounded-xl p-8 text-center transition-colors relative">
                     <input type="file" className="absolute inset-0 opacity-0 cursor-pointer" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" onChange={(e) => setSelectedFile(e.target.files?.[0] || null)} />
-                    <UploadCloud className="w-10 h-10 text-gray-500 mx-auto mb-3" />
-                    <p className="text-gray-300 font-medium mb-1">{selectedFile ? selectedFile.name : "Click or drag to upload files"}</p>
-                    <p className="text-gray-500 text-xs">PDF, DOCX, Images up to 10MB</p>
+                    <UploadCloud className="w-10 h-10 text-gray-500 dark:text-gray-500 mx-auto mb-3" />
+                    <p className="text-gray-700 dark:text-gray-300 font-medium mb-1">{selectedFile ? selectedFile.name : "Click or drag to upload files"}</p>
+                    <p className="text-gray-500 dark:text-gray-500 text-xs">PDF, DOCX, Images up to 10MB</p>
                   </div>
                 </div>
 
@@ -395,11 +395,11 @@ ${data.description}
                 <div className="space-y-4 pt-2">
                   <label className="flex items-start gap-3 cursor-pointer">
                     <div className="relative flex items-start pt-1">
-                      <input type="checkbox" className="w-5 h-5 rounded bg-white/5 border-white/10 text-[#00E5FF] focus:ring-[#00E5FF] cursor-pointer" {...register("consent")} />
+                      <input type="checkbox" className="w-5 h-5 rounded bg-gray-100 dark:bg-white/5 border-gray-200 dark:border-white/10 text-[#C084FC] focus:ring-[#C084FC] cursor-pointer" {...register("consent")} />
                     </div>
                     <div className="flex-1">
-                      <span className="text-gray-300 text-sm font-medium block mb-1">I agree to be contacted by DarkCode X AI regarding my inquiry. *</span>
-                      <span className="text-gray-500 text-xs">We respect your privacy. Your information will only be used to respond to your inquiry and will never be shared with third parties.</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm font-medium block mb-1">I agree to be contacted by DarkCode X AI regarding my inquiry. *</span>
+                      <span className="text-gray-500 dark:text-gray-500 text-xs">We respect your privacy. Your information will only be used to respond to your inquiry and will never be shared with third parties.</span>
                       {errors.consent && <p className="text-red-400 text-xs mt-1">{errors.consent.message}</p>}
                     </div>
                   </label>
@@ -417,7 +417,7 @@ ${data.description}
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full py-5 rounded-xl bg-gradient-to-r from-[#00E5FF] to-[#2563EB] text-white font-bold text-lg hover:shadow-[0_0_30px_-5px_rgba(0,229,255,0.4)] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-5 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#9333EA] text-white font-bold text-lg hover:shadow-[0_0_30px_-5px_rgba(0,229,255,0.4)] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <><Loader2 className="animate-spin" size={20} /> Sending Inquiry...</>
@@ -439,10 +439,10 @@ ${data.description}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-8 right-8 z-50 glass bg-white/10 border border-white/20 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl backdrop-blur-xl"
+            className="fixed bottom-8 right-8 z-50 glass bg-gray-200 dark:bg-white/10 border border-gray-300 dark:border-white/20 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl backdrop-blur-xl"
           >
-            <CheckCircle2 className="text-[#00E5FF] w-5 h-5" />
-            <span className="text-white font-medium">{toastMessage}</span>
+            <CheckCircle2 className="text-[#C084FC] w-5 h-5" />
+            <span className="text-gray-900 dark:text-white font-medium">{toastMessage}</span>
           </motion.div>
         )}
       </AnimatePresence>

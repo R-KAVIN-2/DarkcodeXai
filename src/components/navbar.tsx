@@ -13,7 +13,7 @@ const navLinks = [
   { name: "Services", href: "/services" },
   { name: "Solutions", href: "/solutions" },
   { name: "Portfolio", href: "/projects" },
-  { name: "Research", href: "/research" },
+
   { name: "Contact", href: "/contact" },
 ];
 
@@ -41,7 +41,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img src="/logo.png" alt="DarkCode X AI Logo" className="h-12 w-auto bg-white p-1 rounded-lg" />
-          <span className="font-space-grotesk text-xl font-bold tracking-tighter text-white hidden sm:block">
+          <span className="font-space-grotesk text-xl font-bold tracking-tighter text-gray-900 dark:text-white hidden sm:block">
             DarkCode <span className="text-primary">X</span> AI
           </span>
         </Link>
@@ -63,16 +63,9 @@ export function Navbar() {
 
         {/* Right Actions */}
         <div className="hidden lg:flex items-center gap-4">
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-300 hover:text-white"
-          >
-            <Sun className="h-5 w-5 hidden dark:block" />
-            <Moon className="h-5 w-5 block dark:hidden" />
-          </button>
           <Link
             href="/admin/login"
-            className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+            className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-white transition-colors"
           >
             Login
           </Link>
@@ -86,7 +79,7 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden p-2 text-white"
+          className="lg:hidden p-2 text-gray-900 dark:text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -98,24 +91,24 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden glass absolute top-20 left-0 right-0 p-6 flex flex-col gap-4 border-t border-white/10"
+          className="lg:hidden glass absolute top-20 left-0 right-0 p-6 flex flex-col gap-4 border-t border-gray-200 dark:border-white/10"
         >
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-lg font-medium text-gray-300 hover:text-primary transition-colors"
+              className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
-          <div className="h-px bg-white/10 my-2" />
+          <div className="h-px bg-gray-200 dark:bg-white/10 my-2" />
           <div className="flex items-center justify-between">
-            <span className="text-gray-300 font-medium">Theme</span>
+            <span className="text-gray-700 dark:text-gray-300 font-medium">Theme</span>
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-full hover:bg-white/10 text-gray-300 hover:text-white transition-colors"
+              className="p-2 rounded-full hover:bg-white/10 text-gray-700 dark:text-gray-300 hover:text-white transition-colors"
             >
               <Sun className="h-5 w-5 hidden dark:block" />
               <Moon className="h-5 w-5 block dark:hidden" />
@@ -123,7 +116,7 @@ export function Navbar() {
           </div>
           <Link
             href="/admin/login"
-            className="w-full text-center px-5 py-3 mt-2 rounded-lg bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 transition-colors"
+            className="w-full text-center px-5 py-3 mt-2 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-semibold hover:bg-white/10 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Admin Login

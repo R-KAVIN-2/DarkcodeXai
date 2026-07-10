@@ -41,7 +41,7 @@ function ParticleSphere(props: any) {
       >
         <PointMaterial
           transparent
-          color="#00E5FF"
+          color="#C084FC"
           size={0.005}
           sizeAttenuation={true}
           depthWrite={false}
