@@ -30,7 +30,7 @@ export default function ServicesPage() {
             id="ai"
             title="Artificial Intelligence"
             description="Leverage the power of modern AI to extract insights, automate decisions, and create intelligent products. We specialize in building custom LLMs, computer vision systems, and predictive analytics platforms."
-            icon={<Bot className="w-12 h-12 text-primary" />}
+            icon={<Image src="/home-ai-icon.png" alt="AI Icon" width={60} height={60} className="object-contain" />}
             imageSrc="/services-ai-image.png"
             features={["Custom LLM Development", "Computer Vision & OCR", "Predictive Analytics", "AI Chatbots & Agents"]}
             reversed={false}
