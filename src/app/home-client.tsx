@@ -83,7 +83,7 @@ export default function Home() {
               href="/services#ai"
             />
             <ServiceCard
-              icon={<Cpu className="w-8 h-8 text-accent" />}
+              icon={<Image src="/home-automation-icon.png" alt="Automation Icon" width={40} height={40} className="object-contain" />}
               title="Smart Automation"
               description="Deploy autonomous AI agents and robotic process automation (RPA) systems designed to eliminate repetitive manual tasks. We streamline complex operational workflows, dramatically reduce human error, and accelerate business efficiency to save your team thousands of hours annually."
               href="/services#automation"

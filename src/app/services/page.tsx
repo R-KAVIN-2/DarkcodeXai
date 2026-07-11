@@ -41,7 +41,7 @@ export default function ServicesPage() {
             id="automation"
             title="Smart Automation"
             description="Eliminate repetitive tasks and streamline your workflows with our intelligent automation solutions. We build robust RPA bots and business process automation systems."
-            icon={<Cpu className="w-12 h-12 text-accent" />}
+            icon={<Image src="/home-automation-icon.png" alt="Automation Icon" width={60} height={60} className="object-contain" />}
             imageSrc="/services-automation-image.jpg"
             features={["Workflow Automation", "CRM & HR Automation", "Robotic Process Automation", "Automated Email & Marketing"]}
             reversed={true}
