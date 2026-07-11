@@ -30,7 +30,7 @@ export default function ServicesPage() {
             id="ai"
             title="Artificial Intelligence"
             description="Leverage the power of modern AI to extract insights, automate decisions, and create intelligent products. We specialize in building custom LLMs, computer vision systems, and predictive analytics platforms."
-            icon={<Image src="/home-ai-icon.png" alt="AI Icon" width={60} height={60} className="object-contain" />}
+            icon={<Image src="/home-ai-icon.png" alt="AI Icon" width={80} height={80} className="w-full h-full object-cover" />}
             imageSrc="/services-ai-image.png"
             features={["Custom LLM Development", "Computer Vision & OCR", "Predictive Analytics", "AI Chatbots & Agents"]}
             reversed={false}
@@ -41,7 +41,7 @@ export default function ServicesPage() {
             id="automation"
             title="Smart Automation"
             description="Eliminate repetitive tasks and streamline your workflows with our intelligent automation solutions. We build robust RPA bots and business process automation systems."
-            icon={<Image src="/home-automation-icon.png" alt="Automation Icon" width={60} height={60} className="object-contain" />}
+            icon={<Image src="/home-automation-icon.png" alt="Automation Icon" width={80} height={80} className="w-full h-full object-cover" />}
             imageSrc="/services-automation-image.jpg"
             features={["Workflow Automation", "CRM & HR Automation", "Robotic Process Automation", "Automated Email & Marketing"]}
             reversed={true}
@@ -78,7 +78,7 @@ function ServiceSection({ id, title, description, icon, imageSrc, features, reve
   return (
     <div id={id} className={`flex flex-col ${reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-16 scroll-mt-32`}>
       <div className="flex-1 space-y-6">
-        <div className="w-20 h-20 rounded-2xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center mb-6">
+        <div className="w-20 h-20 rounded-2xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center mb-6 overflow-hidden">
           {icon}
         </div>
         <h2 className="text-4xl font-space-grotesk font-bold text-gray-900 dark:text-white">{title}</h2>

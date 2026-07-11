@@ -77,13 +77,13 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ServiceCard
-              icon={<Image src="/home-ai-icon.png" alt="AI Icon" width={40} height={40} className="object-contain" />}
+              icon={<Image src="/home-ai-icon.png" alt="AI Icon" width={64} height={64} className="w-full h-full object-cover" />}
               title="Artificial Intelligence"
               description="We engineer enterprise-grade custom LLMs, sophisticated machine learning algorithms, and highly accurate predictive analytics models. Our AI solutions are purpose-built to extract deep insights from your data, enabling smarter decision-making and opening new revenue streams for modern businesses."
               href="/services#ai"
             />
             <ServiceCard
-              icon={<Image src="/home-automation-icon.png" alt="Automation Icon" width={40} height={40} className="object-contain" />}
+              icon={<Image src="/home-automation-icon.png" alt="Automation Icon" width={64} height={64} className="w-full h-full object-cover" />}
               title="Smart Automation"
               description="Deploy autonomous AI agents and robotic process automation (RPA) systems designed to eliminate repetitive manual tasks. We streamline complex operational workflows, dramatically reduce human error, and accelerate business efficiency to save your team thousands of hours annually."
               href="/services#automation"
@@ -112,7 +112,7 @@ function ServiceCard({ icon, title, description, href = "/services" }: { icon: R
     <Link href={href} className="block h-full">
       <div className="glass p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden h-full">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="w-16 h-16 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center mb-6 border border-gray-200 dark:border-white/10 group-hover:border-primary/50 transition-colors">
+        <div className="w-16 h-16 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center mb-6 border border-gray-200 dark:border-white/10 group-hover:border-primary/50 transition-colors overflow-hidden">
           {icon}
         </div>
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{title}</h3>
