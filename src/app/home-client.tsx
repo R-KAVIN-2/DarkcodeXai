@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Bot, Cpu, Globe, Database, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import { Hero3D } from "@/components/hero-3d";
 
 export default function Home() {
@@ -76,7 +77,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ServiceCard
-              icon={<Bot className="w-8 h-8 text-primary" />}
+              icon={<Image src="/home-ai-icon.png" alt="AI Icon" width={40} height={40} className="object-contain" />}
               title="Artificial Intelligence"
               description="We engineer enterprise-grade custom LLMs, sophisticated machine learning algorithms, and highly accurate predictive analytics models. Our AI solutions are purpose-built to extract deep insights from your data, enabling smarter decision-making and opening new revenue streams for modern businesses."
               href="/services#ai"
