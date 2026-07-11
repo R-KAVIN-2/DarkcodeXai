@@ -52,7 +52,7 @@ export default function ServicesPage() {
             id="web"
             title="Website & App Development"
             description="We build world-class, highly scalable web applications and SaaS platforms using modern frameworks like Next.js, React, and Node.js. Focus on performance, SEO, and premium UI/UX."
-            icon={<Globe className="w-12 h-12 text-secondary" />}
+            icon={<Image src="/home-web-icon.png" alt="Web Development Icon" width={80} height={80} className="w-full h-full object-cover" />}
             imageSrc="/services-web-image.png"
             features={["Enterprise Web Apps", "SaaS Platform Development", "High-Performance Landing Pages", "Admin Dashboards"]}
             reversed={false}

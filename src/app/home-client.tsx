@@ -89,7 +89,7 @@ export default function Home() {
               href="/services#automation"
             />
             <ServiceCard
-              icon={<Globe className="w-8 h-8 text-secondary" />}
+              icon={<Image src="/home-web-icon.png" alt="Web Development Icon" width={64} height={64} className="w-full h-full object-cover" />}
               title="Website & App Development"
               description="Architecting high-performance, infinitely scalable web platforms and applications utilizing state-of-the-art frameworks like Next.js and React. Our development focuses on flawless user experiences, advanced security, and modular codebases designed to handle massive enterprise-level traffic without degradation."
               href="/services#web"
