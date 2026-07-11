@@ -95,7 +95,7 @@ export default function Home() {
               href="/services#web"
             />
             <ServiceCard
-              icon={<Database className="w-8 h-8 text-primary" />}
+              icon={<Image src="/home-data-icon.png" alt="Data Engineering Icon" width={64} height={64} className="w-full h-full object-cover" />}
               title="Data Engineering"
               description="Transform raw information into actionable intelligence with our comprehensive big data engineering. We design secure, real-time data pipelines, robust cloud architectures, and scalable data lakes that power advanced reporting and keep your business infrastructure future-proof."
               href="/services#data"

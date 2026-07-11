@@ -63,7 +63,7 @@ export default function ServicesPage() {
             id="data"
             title="Data Engineering"
             description="Transform your raw data into actionable business intelligence. We design robust ETL pipelines, data warehouses, and stunning interactive dashboards."
-            icon={<Database className="w-12 h-12 text-primary" />}
+            icon={<Image src="/home-data-icon.png" alt="Data Engineering Icon" width={80} height={80} className="w-full h-full object-cover" />}
             imageSrc="/services-data-image.png"
             features={["Data Engineering & ETL", "Interactive Dashboards", "Big Data Processing", "Business Intelligence"]}
             reversed={true}
